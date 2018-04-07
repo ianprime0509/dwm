@@ -77,9 +77,9 @@ static Key keys[] = {
 	/* Mod+Fn+k */
 	{ MODKEY,           XK_KP_End, spawn,          {.v = brightness_down} },
 	/* Volume */
-	{ MODKEY,           XF86XK_AudioRaiseVolume, spawn, {.v = volume_up } },
-	{ MODKEY,           XF86XK_AudioLowerVolume, spawn, {.v = volume_down } },
-	{ MODKEY,           XF86XK_AudioMute, spawn,   {.v = volume_mute } },
+	{ 0,                XF86XK_AudioRaiseVolume, spawn, {.v = volume_up } },
+	{ 0,                XF86XK_AudioLowerVolume, spawn, {.v = volume_down } },
+	{ 0,                XF86XK_AudioMute, spawn,   {.v = volume_mute } },
 
 	{ MODKEY,           XK_b,      togglebar,      {0} },
 	{ MODKEY,           XK_j,      focusstack,     {.i = +1 } },
