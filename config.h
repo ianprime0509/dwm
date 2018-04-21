@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=11" };
-static const char dmenufont[]       = "monospace:size=11";
+static const char *fonts[]          = { "monospace:size=10" };
+static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -72,10 +72,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask, XK_Return, spawn,          {.v = termcmd } },
 
 	/* Brightness */
-	/* Mod+Fn+j */
-	{ MODKEY,           XK_KP_Down,spawn,          {.v = brightness_up} },
-	/* Mod+Fn+k */
-	{ MODKEY,           XK_KP_End, spawn,          {.v = brightness_down} },
+	{ 0,                XF86XK_MonBrightnessUp,   spawn, {.v = brightness_up} },
+	{ 0,                XF86XK_MonBrightnessDown, spawn, {.v = brightness_down} },
 	/* Volume */
 	{ 0,                XF86XK_AudioRaiseVolume, spawn, {.v = volume_up } },
 	{ 0,                XF86XK_AudioLowerVolume, spawn, {.v = volume_down } },
