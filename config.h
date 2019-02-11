@@ -61,9 +61,8 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *brightness_up[] = { "light", "-A", "10", NULL };
 static const char *brightness_down[] = { "light", "-U", "10", NULL };
 
-static const char *volume_up[] = { "ponymix", "increase", "5", NULL };
-static const char *volume_down[] = { "ponymix", "decrease", "5", NULL };
-static const char *volume_mute[] = { "ponymix", "toggle", NULL };
+static const char *volume_up[] = { "amixer", "set", "Master", "5%+", NULL };
+static const char *volume_down[] = { "amixer", "set", "Master", "5%-", NULL };
 
 static Key keys[] = {
 	/* modifier         key        function        argument */
@@ -77,7 +76,6 @@ static Key keys[] = {
 	/* Volume */
 	{ 0,                XF86XK_AudioRaiseVolume, spawn, {.v = volume_up } },
 	{ 0,                XF86XK_AudioLowerVolume, spawn, {.v = volume_down } },
-	{ 0,                XF86XK_AudioMute, spawn,   {.v = volume_mute } },
 
 	{ MODKEY,           XK_b,      togglebar,      {0} },
 	{ MODKEY,           XK_j,      focusstack,     {.i = +1 } },
