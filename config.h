@@ -61,8 +61,8 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *brightness_up[] = { "light", "-A", "10", NULL };
 static const char *brightness_down[] = { "light", "-U", "10", NULL };
 
-static const char *volume_up[] = { "amixer", "set", "Master", "5%+", NULL };
-static const char *volume_down[] = { "amixer", "set", "Master", "5%-", NULL };
+static const char *volume_up[] = { "amixer", "-M", "set", "Master", "5%+", NULL };
+static const char *volume_down[] = { "amixer", "-M", "set", "Master", "5%-", NULL };
 
 static Key keys[] = {
 	/* modifier         key        function        argument */
